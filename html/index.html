@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/js/javascript.js"></script>
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <div class="converter-wrapper">
+      <h1>Unit <br />Converter</h1>
+      <h2>-by Ankit Malik</h2>
+      <form name="property_form">
+        <span>
+          <select
+            class="select-property"
+            name="the_menu"
+            size="1"
+            onChange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)"
+          ></select>
+        </span>
+      </form>
+      <!-- /converter-side-a -->
+
+      <div class="sides-block">
+        <div class="converter-side-a" id="block1">
+          <h2>Input</h2>
+          <form name="form_A" onSubmit="return false">
+            <input
+              type="text"
+              class="numbersonly"
+              name="unit_input"
+              maxlength="20"
+              value="0"
+              onKeyUp="CalculateUnit(document.form_A, document.form_B)"
+            />
+            <span>
+              <select
+                name="unit_menu"
+                onChange="CalculateUnit(document.form_B, document.form_A)"
+              ></select>
+            </span>
+          </form>
+
+          <div class="converter-equals equal-blocks">
+            <p>=</p>
+          </div>
+        </div>
+
+        <div class="converter-side-b blocks" id="block2">
+          <h2>Output</h2>
+          <form name="form_B" onSubmit="return false">
+            <input
+              type="text"
+              class="numbersonly"
+              name="unit_input"
+              maxlength="20"
+              value="0"
+              onkeyup="CalculateUnit(document.form_B, document.form_A)"
+            />
+            <span>
+              <select
+                name="unit_menu"
+                onChange="CalculateUnit(document.form_A, document.form_B)"
+              ></select>
+            </span>
+          </form>
+        </div>
+        <!-- /converter-side-b -->
+      </div>
+    </div>
+  </body>
+</html>
