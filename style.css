@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 body{
+    width: 100vw;
     height: 100vh;
     position: relative;
     display: flex;
@@ -63,9 +64,9 @@ button{
     border: #ddd;
     position: relative;
 	top: 10px;
-    left: 15em;
-	width: 200px;
-	height: 40px;
+    left: 31%;
+	width: 16em;
+	height: 3em;
 	margin: 0;
 	display: flex;
 	justify-content: center;
